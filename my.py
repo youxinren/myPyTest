@@ -34,17 +34,17 @@ print(a,b)#结果为 3 1
 print(len("中文"))
 
 ## list 和tuple 定义方式不一样,tuple定义了后不能进行更改,访问方式是一样的
-list=["a",'b',2]
-print(list)
+li=["a",'b',2]
+print(li)
 tuple_1=('a',2)
-print(len(list),len(tuple_1))
-list.insert(3,'d')
-list.append('e')
+print(len(li),len(tuple_1))
+li.insert(3,'d')
+li.append('e')
 tuple_2=(2,)#定义两个长度的tupel
 tuple_2=(1,'b')
 print(tuple_2,tuple_2[0])
-print(list,list[2])
-for i,value in enumerate(list):
+print(li,li[2])
+for i,value in enumerate(li):
     print("index->value",i,value)
 
 
@@ -107,6 +107,10 @@ l=[x for x in range(10)]
 g=(x for x in range(10))
 
 
+#返回函数中,不要引用可能变化的变量.
+# 匿名函数需要使用关键字lamdba
+
+print(list(map(lambda x:x*2,[1,2,3])))
 
 
 
